@@ -10,10 +10,12 @@ I wasn't satisfied with the way it looked on desktop and mobile, so I decided to
 ### How-to
 
 Simply enter a location in one of three formats, and the app will report the weather and local time for that location:
-For cities outside of the United States: Enter either 'City, Country' (ex. 'London, England'), or just the city (ex. 'London')
-For cities within the United States: Enter either 'City, State, United States' (ex. 'Boston, Massachusetts, United States') or just the city (ex. 'Boston')
+* For cities outside of the United States:
+    * Enter either 'City, Country' (ex. 'London, England'), or just the city (ex. 'London')
+* For cities within the United States:
+    * Enter either 'City, State, United States' (ex. 'Boston, Massachusetts, United States') or just the city (ex. 'Boston')
 
-Note that many cities share a name, so the more specific your query the better.
+Note that many cities share a name, so the more specific your query the better!
 
 ### Additional Features
 
