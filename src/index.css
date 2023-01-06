@@ -1,0 +1,251 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  background-image: url('./assets/bg.webp');
+  background-size: cover;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+#root {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+  display: grid;
+  grid-template: 3fr 1fr / 1fr 1fr;
+  width: 50%;
+  height: 500px;
+  font-size: calc(18px + 1vw);
+  grid-gap: 24px;
+}
+
+@media screen and (max-width: 1050px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    height: 95%;
+  }
+}
+
+.App > div {
+  position: relative;
+  border: ridge #edece4 3px;
+  background-color: white;
+  height: 25px;
+  overflow: hidden;
+  padding: 0;
+  transition: height .25s ease-in-out;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1290px) {
+  .App > .data {
+    font-size: calc(16px + 1vw);
+  }
+}
+
+@media screen and (max-width: 1143px) {
+  .App > .data {
+    font-size: calc(14px + 1vw);
+  }
+}
+
+.text-relay {
+    grid-column: 1 / 3;
+}
+
+.interface {
+  animation-name: enter;
+  animation-duration: .225s;
+  overflow: hidden;
+}
+
+input {
+  height: calc(18px + 1vw);
+  width: 97.5%;
+  font-size: calc(18px + 1vw);
+  border: inset #edece4 3px;
+  transition: background-color .15s ease;
+}
+
+input:focus {
+  outline: none;
+  background-color: rgb(202, 202, 202);
+}
+
+.header {
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 100%;
+  padding-top: 2px;
+
+  font-size: 18px;
+  border-bottom: ridge #edece4;
+  background: linear-gradient(90deg, rgb(9 31 103) 0%, rgba(255,255,255,1) 100%);
+
+  color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (max-width: 1050px) {
+  .header {
+    font-size: 16px;
+  }
+}
+
+.header img {
+  margin-right: 6px;
+}
+
+.current-city {
+  margin-left: 24px;
+}
+
+.icon {
+  width: 18px;
+}
+
+.prefixed {
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-relay .forecast-text {
+  margin-top: 25px;
+}
+
+#active {
+  color: white;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, 0px -1px #000, 1px -1px #000, -1px 1px #000;
+}
+
+.systems span:hover {
+  color: white;
+  text-shadow: 2px 0 #000, -2px 0 #000, 0 2px #000, 0 -2px #000, 1px 1px #000, 0px -1px #000, 1px -1px #000, -1px 1px #000;
+  cursor: pointer;
+}
+
+.weather img {
+  width: 45px;
+  vertical-align: bottom;
+}
+
+.App > .error {
+  position: absolute;
+  padding: 0px;
+  height: 0px;
+  border: none;
+  transition: all .25s ease;
+}
+
+.App .text-relay {
+  height: 25px;
+  padding: 0;
+}
+
+.error {
+  width: 300px;
+  left: 3.75%;
+  top: 3.75%;
+  font-size: calc(16px);
+}
+
+.data#opened {
+  height: calc(255px + 5vw);
+  padding: 24px;
+}
+
+@media screen and (max-width: 1050px){
+  .data#opened {
+    font-size: calc(16px + 1vw);
+    padding-bottom: 12px;
+    padding-top: 36px;
+  }
+}
+
+.interface#opened {
+  height: calc(255px + 5vw);
+  padding: 24px;
+}
+
+@media screen and (max-width: 1050px){
+  .interface#opened {
+    height: 125px;
+    padding-bottom: 12px;
+  }
+}
+
+.text-relay#opened {
+  height: 125px;
+  padding: 24px;
+}
+
+@media screen and (max-width: 1050px) {
+  .text-relay#opened {
+  height: 125px;
+  padding: 24px;
+  font-size: calc(14px + 1vw);
+  padding-bottom: 0px;
+  padding-left: 12px;
+  padding-right: 12px;
+  justify-content: flex-start;
+  }
+}
+
+.error#opened {
+  padding: 24px;
+  padding-top: 36px;
+  height: 80px;
+  border: ridge #edece4 3px;
+}
+
+@media screen and (max-width: 1050px) {
+  .error {
+    width: 200px;
+    left: auto;
+    bottom: auto;
+    top: 25%;
+  }
+
+  .error#opened {
+    font-size: 12px;
+    padding-bottom: 20px;
+    padding-top: 45px;
+    bottom: auto;
+    top: 25%;
+  } 
+}
+
+.App .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: none;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  height: 12px;
+  background-color: #00000038;
+}
