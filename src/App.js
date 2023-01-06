@@ -61,7 +61,7 @@ const App = () => {
       const weatherResult = await weatherResponse.json();
       setData(weatherResult);
 
-      const timeResponse = await fetch('http://api.timezonedb.com/v2.1/get-time-zone?key=Q0RXG90J3FC2&format=json&by=position&lat=' +
+      const timeResponse = await fetch('https://api.timezonedb.com/v2.1/get-time-zone?key=Q0RXG90J3FC2&format=json&by=position&lat=' +
       weatherResult.coord.lat + '&lng=' + weatherResult.coord.lon, {mode : 'cors'})
       const timeResult = await timeResponse.json()
       const dateInNumbers = new Date(timeResult.formatted.replace(' ', 'T')).getTime()
