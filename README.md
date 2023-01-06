@@ -1,70 +1,27 @@
-# Getting Started with Create React App
+# React Weather App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A simple application built using React that retrieves the current weather of a user entered location via the [OpenWeather API](https://openweathermap.org/)
 
-## Available Scripts
+## Background
 
-In the project directory, you can run:
+This is a rebuild of a similar project I built a few months ago as an exercise in using APIs. 
+I wasn't satisfied with the way it looked on desktop and mobile, so I decided to rebuild it (and get more React practice in the process).
 
-### `npm start`
+### How-to
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Simply enter a location in one of three formats, and the app will report the weather and local time for that location:
+For cities outside of the United States: Enter either 'City, Country' (ex. 'London, England'), or just the city (ex. 'London')
+For cities within the United States: Enter either 'City, State, United States' (ex. 'Boston, Massachusetts, United States') or just the city (ex. 'Boston')
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Note that many cities share a name, so the more specific your query the better.
 
-### `npm test`
+### Additional Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* Local date-time reporting (Note: the timer will eventually desync if left alone for a number of hours)
+* Data output in typewriter-style dialogue box
+* Mobile-friendly :)
 
-### `npm run build`
+### Notable Takeaways
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* Learned how to more effectively transfer data between child components
+* Learned how to use the ids randomly assigned to ```setTimeout``` and ```setInterval``` to selectively enable and disable certain ```setTimeout``` and ```setInterval``` calls
