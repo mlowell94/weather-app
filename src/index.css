@@ -54,10 +54,8 @@ code {
   flex-direction: column;
 }
 
-@media screen and (max-width: 1290px) {
-  .App > .data {
-    font-size: calc(16px + 1vw);
-  }
+.App > .data {
+  font-size: calc(16px + 1vw);
 }
 
 @media screen and (max-width: 1143px) {
